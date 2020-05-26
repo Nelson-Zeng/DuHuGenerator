@@ -1,0 +1,108 @@
+request_return_duhufu_an2 = { 
+		category = duhufu_actions
+		require_acceptance = yes
+		alert_tooltip = ICON_TRIBUTARY
+		is_visible = {
+			FROM = {
+				is_subject_of_type = duhufu_state
+				tag = AN2
+			}
+			overlord_of = FROM	
+		}
+		is_allowed = {
+			is_at_war = no
+			is_subject = no			
+			FROM = {
+				NOT = { liberty_desire = 50 }	
+			}	
+			FROM = {
+					tag =  AN2
+			}
+			NOT = { has_country_modifier = md_building_anduhufu }
+		}
+		on_accept = {
+			#inherit = FROM	#only show event
+			country_event = {
+				 id = rab_events.100
+			}	
+		}		
+		on_decline = {
+			#inherit = FROM	#only show event
+			country_event = {
+				 id = rab_events.100
+			}
+		}
+		ai_acceptance = {
+			add_entry = {
+				name = PRESTIGE_COMPARED_US
+				export_to_variable = {
+					variable_name = ai_value
+					value = prestige
+				}
+				export_to_variable = {
+					variable_name = he_value
+					value = prestige
+					who = FROM
+				}
+				subtract_variable = {
+					which = ai_value
+					which = he_value
+				}
+				multiply_variable = {
+					which = ai_value
+					value = 2
+				}
+			}			
+			add_entry = {
+				name = ADMTECH_COMPARED_US
+				export_to_variable = {
+					variable_name = ai_value
+					value = adm_tech
+				}
+				export_to_variable = {
+					variable_name = he_value
+					value = adm_tech
+					who = FROM					
+				}
+				subtract_variable = {
+					which = ai_value
+					which = he_value
+				}				
+				multiply_variable = {
+					which = ai_value
+					value = 2
+				}
+			}
+			add_entry = {
+				name = OPINION_TOWARD_US
+				export_to_variable = {
+					variable_name = ai_value
+					value = opinion
+					who = FROM
+				}
+				multiply_variable = {
+					which = ai_value
+					value = 10
+				}
+			}
+			add_entry = {
+				name = TRUST_TOWARD_US
+				export_to_variable = {
+					variable_name = ai_value
+					value = trust
+					who = FROM
+				}
+				subtract_variable = {
+					which = ai_value
+					value = 50
+				}					
+				multiply_variable = {
+					which = ai_value
+					value = 10
+				}				
+			}
+		}
+	ai_will_do = {
+		always = no
+	}		
+}

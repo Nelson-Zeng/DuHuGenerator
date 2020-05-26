@@ -1,0 +1,79 @@
+###########################################################################
+#		
+#	Build :name
+#
+##########################################################################
+	:id = {
+
+		major = yes
+			potential = {
+				has_reform = celestial_empire
+				NOT = { exists = :tag }
+				NOT = { is_year = 1800 }
+			}
+			allow = {
+				NOT = { has_country_modifier = :buidingModifier }
+				NOT = { has_country_modifier = :returnModifier }
+				
+				custom_trigger_tooltip = {
+					tooltip = tp_ancient_chinese_duhufu_build
+					NOT = {
+						any_country = {
+							NOT = { tag = ROOT }
+							has_reform = celestial_empire
+						}	
+					}	
+				}			
+				is_at_war = no
+				is_subject = no
+:conditions
+				capital_scope = {
+					OR = {
+						region = south_china_region
+						region = north_china_region
+						region = xinan_region
+					}	
+				}
+				num_of_cities = 80
+			}
+		effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+:territories
+					}
+				}				
+				cede_province = :tag
+				add_core = :tag
+			}
+			add_country_modifier = {
+				name = ":buidingModifier"
+				duration = 36500
+			}
+	        create_subject = {
+
+				subject_type = duhufu_state
+	
+				subject = :tag
+
+			}
+			:tag = {
+				set_country_flag = flg_overlord_abandon_alliance
+				country_event = {
+					id = rab_canonized.6
+					days = 1
+				}
+			}
+		
+:discoveries
+
+			if = {
+				limit = { 
+					religion = daoism
+				}
+				:tag = {
+					change_religion = daoism
+				}		
+			}				
+		}	
+	}

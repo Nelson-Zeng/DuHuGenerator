@@ -1,0 +1,12 @@
+			south_china_region = {
+				discover_country = :tag
+			}
+			north_china_region = {
+				discover_country = :tag
+			}			
+			tibet_region = {
+				discover_country = :tag
+			}			
+			xinan_region = {
+				discover_country = :tag
+			}

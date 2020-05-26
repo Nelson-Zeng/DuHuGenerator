@@ -1,0 +1,4 @@
+                :area = {
+					type = all 
+					owned_by = ROOT
+				}

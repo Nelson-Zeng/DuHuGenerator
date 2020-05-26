@@ -1,0 +1,1290 @@
+##################################################################################################
+# scriptable and usable for event-system below.
+##################################################################################################
+# 2019-04-07 : add 輻射塵modifier 
+# 2019-08-18 : add 海軍基地diptech = 88
+# 2019-08-26 : add pov_nuclear_central_bomb
+test = {
+	
+}
+md_return_duhufu_ND1 = {
+}	
+md_return_duhufu_AN3 = {
+}	
+md_return_duhufu_AN2 = {
+}	
+md_return_duhufu_XIY = {
+}	
+
+
+Indian_Ocean_Trade = {
+	trade_efficiency = 0.1
+	naval_forcelimit_modifier = 0.1
+	heavy_ship_power = 0.1
+
+}	
+ai_declare_war_to_duhufu = {
+	
+}	
+md_jeanne_skill = {
+	land_morale = 0.5
+	infantry_power = 0.25
+	cavalry_power = 0.25
+	discipline = 0.25
+}	
+
+pov_info_chuanguoyuxi = {
+	picture = "pov_event_icon"
+}	
+md_chuanguoyuxi = {
+	imperial_mandate = 0.05
+	global_manpower_modifier = 0.2
+	land_morale = 0.05
+	diplomatic_upkeep = 1
+	global_unrest = -2	
+	prestige = 1
+}	
+#掌控南海諸島
+control_whole_southern_islands = {
+	trade_efficiency = 0.1
+	naval_forcelimit_modifier = 0.1
+	heavy_ship_power = 0.1
+	sunk_ship_morale_hit_recieved = -0.1
+}	
+#核爆中心
+pov_nuclear_central_bomb = {
+	local_colonist_placement_chance = -1.0
+	local_colonial_growth = -99
+}	
+md_okinawa_navy_base_mission = {
+	land_morale = 0.1
+	global_unrest = -5	
+	navy_tradition = 1
+	naval_forcelimit_modifier = 0.1
+	heavy_ship_power = 0.1
+	sunk_ship_morale_hit_recieved = -0.2
+}	
+pov_okinawa_navy_base = {
+	picture = "pov_navy_base"
+}	
+md_radiation_dust = {
+	
+	local_development_cost = 0.5
+	local_manpower_modifier = -0.95
+	garrison_growth = -0.5
+	global_garrison_growth = -0.95
+	local_monthly_devastation = 0.25
+	local_friendly_movement_speed  = -0.5
+	local_hostile_movement_speed = -0.5
+	supply_limit_modifier = -0.25
+	local_colonist_placement_chance = -1
+	local_tax_modifier = -0.95
+	attrition = 5
+
+	picture = "pov_influenza_already"
+}
+#已經舉辦過科舉了
+
+md_hold_empire_examination = {
+	
+}	
+
+# 已經發射過核武了
+md_lanuch_nuclear_ever = {
+	ae_impact = 0.75
+	prestige_decay = 0.5
+}	
+
+keep_1_anti_nuclear_building = {
+	
+}	
+keep_2_anti_nuclear_building = {
+	
+}	
+keep_3_anti_nuclear_building = {
+	
+}	
+keep_4_anti_nuclear_building = {
+	
+}	
+keep_5_anti_nuclear_building = {
+	
+}	
+keep_6_anti_nuclear_building = {
+	
+}	
+keep_7_anti_nuclear_building = {
+	
+}	
+keep_8_anti_nuclear_building = {
+	
+}	
+keep_9_anti_nuclear_building = {
+	
+}	
+keep_10_anti_nuclear_building = {
+	
+}	
+Taipen_church_power_modifier = {
+	reinforce_speed = 0.1
+	manpower_recovery_speed = 0.1
+}
+Taipen_golden_store_modifier = {
+	global_tax_modifier = 0.1
+}	
+
+# 這兩個之前都有 但某個版本之後就被拿掉了
+center_of_trade_modifier = {
+	local_institution_spread = 0.10
+	province_trade_power_value = 10
+	naval_forcelimit = 2
+	local_development_cost = -0.05
+	local_sailors_modifier = 0.50
+	picture = "province_trade_power_value"
+}
+# 每年的評議制度
+md_cele_meeting = {
+	
+}	
+# Important inland center of trade
+inland_center_of_trade_modifier = {
+	local_institution_spread = 0.10
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	picture = "province_trade_power_value"
+}
+
+
+treasury_charming = {
+	imperial_mandate = 0.05
+	artillery_cost = -0.15
+	global_unrest = -2
+}
+
+silk_road_modifier_complete_buff = {
+	trade_steering = 0.1
+	trade_efficiency = 0.1
+}
+
+#特殊占领的省分计算日期
+occupy_counting = {
+	picture = "pov_clock"
+}
+md_confucianism_covert = {
+	global_unrest = -2
+	imperial_mandate = 0.05
+}	
+#special infomation already
+md_tianshanlotus = {
+	picture = "pov_tianshanlotus"
+}
+md_stopwarflag = {
+	picture = "pov_stopwarflag"
+}	
+md_milbook = {
+	#local_manpower_modifier = 0.1
+	picture = "pov_milbook"
+}
+md_admbook = {
+	picture = "pov_admbook"
+}		
+md_had_drought = {
+	picture = "pov_had_drought"
+}	
+md_already_talk_consort = {
+
+}	
+md_special_haw_par_riding = {
+	
+}
+md_special_xio_riding = {
+	
+}
+md_special_xib_riding = {
+	
+}
+md_special_hu_bijun = {
+	
+}
+md_special_qiexueqi_riding = {
+	
+}
+md_special_habayashi_riding = {
+	
+}
+md_special_guanningtieqi_riding = {
+	
+}
+md_special_feihu_riding = {
+	
+}
+md_special_chnite = {
+	
+}
+md_special_beifubing = {
+	
+}
+md_special_barbarian_warrior = {
+	
+}
+md_special_baiweiqi_riding = {
+	
+}
+md_special_baiwei_jinbin = {
+	
+}
+md_special_baierwei = {
+	
+}
+md_special_xuanjia_riding = {
+	
+}
+md_special_modao = {
+    
+}    
+had_et_famine = {
+	picture = "pov_supported_province"
+}	
+md_special_primitive_transport = {
+
+}
+capital_dis_0 = {
+    picture = "pov_earth"
+}    
+capital_dis_1 = {
+    picture = "pov_earth"
+}
+capital_dis_2 = {
+	picture = "pov_earth"
+}  
+capital_dis_3 = {
+	picture = "pov_earth"	
+}    
+capital_dis_4 = {
+    picture = "pov_earth"
+}
+capital_dis_5 = {
+	picture = "pov_earth"
+}     
+capital_dis_6 = {
+	picture = "pov_earth"
+}  
+	
+#游牧和野蛮人特殊占领的省分计算日期
+horde_occupy_counting = {
+	picture = "pov_clock"
+}
+#被宗主国拒绝战争后不再提十年
+cold_down_war = {
+	
+	
+}
+#今年已经招募了虎豹骑 
+md_recruit_once_done = {
+	
+	
+}
+# war with JA1 info for player could occupy JA1 
+md_war_with_JA1 = {
+	
+}	
+more_heir_chance_0 = {
+	heir_chance = -0.01
+}	
+more_heir_chance_1 = {
+	heir_chance = 0.01
+}	
+more_heir_chance_2 = {
+	heir_chance = 0.05
+}	
+more_heir_chance_3 = {
+	heir_chance = 0.1
+}	
+more_heir_chance_4 = {
+	heir_chance = 0.15
+}	
+more_heir_chance_5 = {
+	heir_chance = 0.2
+}	
+more_heir_chance_6 = {
+	heir_chance = 0.25
+}	
+more_heir_chance_7 = {
+	heir_chance = 0.3
+}	
+more_heir_chance_8 = {
+	heir_chance = 0.35
+}	
+more_heir_chance_9 = {
+	heir_chance = 0.4
+}	
+more_heir_chance_10 = {
+	heir_chance = 0.5
+}	
+
+
+et_plague = {
+	local_development_cost = 0.5
+	local_manpower_modifier = -0.5
+	garrison_growth = -0.5
+	local_friendly_movement_speed  = -0.25
+	local_hostile_movement_speed = -0.35
+	attrition = 2
+}
+
+et_famine = {
+	local_development_cost = 0.5
+	local_manpower_modifier = -0.5
+	local_tax_modifier = -0.5
+	garrison_growth = -0.5
+	local_friendly_movement_speed = -0.5
+	local_hostile_movement_speed = -0.5
+	attrition = 2
+}
+
+et_drought = {
+	local_development_cost = 0.5
+	local_manpower_modifier = -0.5
+	local_tax_modifier = -0.5
+	garrison_growth = -0.5
+	local_friendly_movement_speed  = -0.25
+	local_hostile_movement_speed = -0.45
+	attrition = 2
+}
+
+occurrence_1 = {
+	picture = "pov_event_icon"
+}
+pov_no_rain = {
+
+	picture = "pov_no_rain"
+}
+#五年内有打过岛屿战
+md_had_occupy_southernsea = {
+		
+}
+
+tech_change_process = {
+
+}
+
+md_unstable_state = {
+	global_unrest = 5
+}
+
+md_unstable_state_tradition = {
+	global_unrest = 5
+}
+md_recovery_TO1 = {
+	development_cost = -0.1
+	production_efficiency = 0.1
+	land_morale = 0.1
+	global_unrest = -5
+}
+md_recovery_KSD = {
+	development_cost = -0.2
+	production_efficiency = 0.15
+	land_morale = 0.1
+	global_unrest = -4
+}
+#罪己诏
+
+md_ruler_shame = {
+	global_unrest = -3
+	prestige = -5
+	legitimacy = -5
+}
+md_no_leader_debuff = {
+	land_morale = -0.25
+	infantry_power = -0.5
+	discipline = -0.5
+	land_forcelimit_modifier = -0.5
+	global_manpower_modifier = -0.5
+	defensiveness = -0.5
+	production_efficiency = -0.5
+	global_tax_modifier = -0.5
+	core_creation = 0.5
+}
+
+md_no_leader_debuff_CH4 = {
+	land_morale = -0.2
+}
+
+#壕沟作用
+pov_war_trench = {
+	local_hostile_movement_speed = -0.70
+	attrition = 150
+	max_attrition = 200
+	picture = "pov_war_trench_icon"
+}
+#天朝年号buff
+Reigntitle_a_modifier = {
+	global_missionary_strength = 0.05
+}
+
+Reigntitle_b_modifier = {
+	global_regiment_recruit_speed = -0.1
+}
+
+Reigntitle_c_modifier = {
+	global_ship_recruit_speed = -0.2
+}
+Reigntitle_d_modifier = {
+	global_spy_defence = 0.3
+}
+Reigntitle_e_modifier = {
+	naval_maintenance_modifier = -0.15
+}
+Reigntitle_f_modifier = {
+	army_tradition = 0.5 
+}
+Reigntitle_g_modifier = {
+	navy_tradition = 1
+}
+Reigntitle_h_modifier = {
+	improve_relation_modifier = 0.33
+}
+Reigntitle_i_modifier = {
+	reinforce_speed = 0.1
+}
+Reigntitle_j_modifier = {
+	core_creation = -0.1
+}
+Reigntitle_k_modifier = {
+	global_trade_power = 0.15
+}
+Reigntitle_l_modifier = {
+	idea_cost = -0.1
+}
+Reigntitle_m_modifier = {
+	global_colonial_growth = 55
+}
+Reigntitle_o_modifier = {
+	discipline = 0.05
+}
+Reigntitle_p_modifier = {
+	infantry_cost = -0.10	
+}
+Reigntitle_q_modifier = {
+	infantry_power = 0.1
+}
+Reigntitle_r_modifier = {
+	land_attrition = -0.15
+}
+Reigntitle_s_modifier = {
+	stability_cost_modifier = -0.15
+}
+#宅心仁厚
+ra_ch1 = {
+#	prestige = 1
+#	production_efficiency = 0.1
+#	stability_cost_modifier = -0.1
+#	global_unrest = -1
+}
+#机敏过人
+ra_ch2 = {
+#	diplomatic_reputation = 1
+#	global_tax_modifier = 0.15
+#	discipline = 0.05
+}
+#性格暴虐
+ra_ch3 = {
+#	prestige = -1
+#	stability_cost_modifier = 0.15
+#	global_unrest = 2
+#	global_garrison_growth = -0.1
+#	heir_chance = 0.25
+#	global_colonial_growth = 25
+}
+#懦弱胆小
+ra_ch4 = {
+#	global_tax_modifier = -0.1
+#	global_unrest = 2
+#	diplomatic_reputation = -1
+#	free_leader_pool = -3
+}
+#贪图享乐
+ra_ch5 = {
+#	prestige = -0.2
+#	global_unrest = 1
+#	global_tax_modifier = -0.15
+#
+}
+#雄心壮志
+ra_ch6 = {
+#	enemy_core_creation = 0.1
+#	legitimacy = 1
+#	global_unrest = -2
+#	navy_tradition = 1
+}
+#优柔寡断
+ra_ch7 = {
+#	development_cost = 0.1
+#	production_efficiency = -0.1
+#	land_morale = -0.05
+#	global_unrest = 1
+}
+#用人唯才
+ra_ch8 = {
+#	tolerance_own = 2
+#	global_unrest = -1
+#	global_regiment_recruit_speed = -0.1
+#	development_cost = -0.1
+#	free_leader_pool = 3
+	
+}
+#冲动鲁莽
+ra_ch9 = { 
+#	diplomatic_reputation = -1
+#	land_maintenance_modifier = 0.1
+#	land_attrition = 0.15
+#	stability_cost_modifier = 0.1
+#	range = 0.25
+}
+#重视内政
+rb_ch1 = {
+#	idea_cost = -0.1
+}
+#重视军事
+rb_ch2 = {
+#	army_tradition = 1
+}
+#重视发展
+rb_ch3 = {
+#	development_cost = -0.1
+}
+#重视名声
+rb_ch4 = {
+#	prestige = 1
+}
+#重视宗教
+rb_ch5 = {
+#	global_missionary_strength = 0.02
+}
+#重视外交
+rb_ch6 = {
+#	diplomatic_upkeep = 1
+}
+#重视人文
+rb_ch7 = {
+	
+}
+#重视商业
+rb_ch8 = {
+#	trade_efficiency = 0.1
+}
+md_tiny_country_develop = {
+  land_morale = 0.1	
+  infantry_cost = -0.20
+  artillery_cost = -0.20
+  cavalry_cost = -0.15
+  advisor_cost = -0.95
+}
+
+no_info_me_siege = {
+
+}
+
+md_Western_Regions_Frontier_Command = {
+
+	global_trade_power = 0.1
+	stability_cost_modifier = -0.05
+	global_unrest = -1
+}
+
+md_Servants_Du_Wei = {
+	legitimacy = 0.5
+	global_tax_modifier = 0.1
+
+}
+md_chinese_enuchs_party_power = {
+
+ }
+md_chinese_bureaucrat_party_power = { 
+
+}
+md_chinese_relationship_party_power = { 
+
+}
+#this is focus on event for HAN ending times
+no_heir_chance = { 
+	heir_chance = -1.5
+}
+md_no_consort = { 
+	heir_chance = -1.5
+}
+md_duhufu_no_heir = {
+	heir_chance = -1.5
+}	
+LIL_extend = { 
+
+}
+DOG_extend = { 
+
+}
+TSU_extend = {
+
+}
+WNF_extend = { 
+
+}
+LZO_extend =  { 
+
+}
+TSS_extend =  { 
+
+}
+HJJ_extend = {
+
+}
+TP1_extend = {
+
+}
+ZZ1_extend = {
+
+}
+
+md_liuxiu_skill = {
+
+}
+md_white_lotus_inspiration = {
+	land_morale = 0.1
+	infantry_cost = -0.25
+	land_forcelimit_modifier = 0.25
+	global_manpower_modifier = 0.25
+}	
+
+md_circle_skill = {
+
+	defensiveness = 1.0
+}
+
+md_confused_skill = {
+	land_morale = -0.1
+}
+md_strong_decipline_lv1_skill = {
+	discipline = 0.1
+}
+md_strong_decipline_lv2_skill = {
+	discipline = 0.2
+}
+md_strong_decipline_lv3_skill = {
+	discipline = 0.3
+}
+
+md_strong_inspire_lv1_skill = {
+	discipline = 0.05
+	land_morale = 0.1
+}
+md_strong_inspire_lv2_skill = {
+	discipline = 0.1
+	land_morale = 0.15
+}
+md_strong_inspire_lv3_skill = {
+	discipline = 0.15
+	land_morale = 0.2
+}
+
+
+md_strong_navyfire_lv1_skill = {
+
+	light_ship_power = 0.25
+	heavy_ship_power = 0.25
+}
+
+md_strong_navyfire_lv2_skill = {
+
+	light_ship_power = 0.33
+	heavy_ship_power = 0.33
+
+}
+
+md_strong_navyfire_lv3_skill = {
+
+	light_ship_power = 0.55
+	heavy_ship_power = 0.55
+
+}
+
+md_force_army_skill = {
+	recover_army_morale_speed = 0.5
+	recover_navy_morale_speed = 0.5
+	infantry_power = 0.2
+	cavalry_power = 0.15
+	heavy_ship_power = 0.15
+}
+
+md_Inspiration_skill = { 
+	land_morale = 0.1
+}
+
+md_discipline_skill = { 
+	discipline = 0.05
+}
+
+md_fire_damage_skill = { 
+	fire_damage = 0.1
+}
+
+md_fake_skill = {
+ 
+ land_attrition = 0.2
+ land_morale = -0.45
+
+}
+
+
+md_be_fire_att_lv1 = { 
+
+ land_forcelimit_modifier = -0.2
+ land_attrition = 0.2
+ land_morale = -0.05
+ infantry_power = -0.1
+ cavalry_power = -0.1
+}
+
+md_be_fire_att_lv2 = { 
+
+ land_forcelimit_modifier = -0.4
+ land_attrition = 0.4
+ land_morale = -0.1
+ infantry_power = -0.2
+ cavalry_power = -0.2
+ 
+}
+
+md_be_fire_att_lv3 = { 
+
+ land_forcelimit_modifier = -0.6
+ land_attrition = 0.6
+ land_morale = -0.15
+ infantry_power = -0.5
+ cavalry_power = -0.5
+ 
+}
+
+md_HAN_WARLORD_END = {
+	land_morale = 0.1
+	legitimacy = 1
+	stability_cost_modifier = -0.15
+	prestige = 1
+}
+
+md_control_han_emperor = {
+	stability_cost_modifier = -0.1
+	legitimacy = 2
+	prestige = 2
+}
+searching_items = {
+
+}
+
+md_ZIX_TAX_10_OFF_EFFECT = {
+	global_tax_modifier = -0.1
+	land_forcelimit_modifier = -0.1
+}
+
+md_ZIX_TAX_20_OFF_EFFECT = {
+	global_tax_modifier = -0.2
+	land_forcelimit_modifier = -0.15
+}
+
+md_ZIX_TAX_30_OFF_EFFECT = {
+	global_tax_modifier = -0.3
+	land_forcelimit_modifier = -0.15
+}
+
+md_ZIX_TAX_40_OFF_EFFECT = {
+	global_tax_modifier = -0.4
+	land_forcelimit_modifier = -0.2
+}
+
+
+md_force_army_lv1_skill = {
+	discipline = 0.05
+	land_morale = 0.05
+}
+md_force_army_lv2_skill = {
+	discipline = 0.1
+	land_morale = 0.1
+}
+md_force_army_lv3_skill = {
+	discipline = 0.15
+	land_morale = 0.15
+}
+md_fire_lv3_skill = {
+	discipline = 0.25
+	land_morale = 0.20
+	infantry_power = 0.25
+	cavalry_power = 0.25
+}
+
+
+#SIMA_YI_BAGUA_ZHEN_eventPicture
+md_bagua_zhen_skill = {
+	defensiveness = 2.5
+	discipline = 0.25
+}
+MYE_BASE = {
+	local_manpower_modifier = -0.2
+	local_tax_modifier = -0.2
+	local_ship_cost = 0.2
+	local_production_efficiency = -0.15
+}
+dont_care_ZIX = {
+
+}
+alarm_by_ZIX = {
+
+}
+#宇文鲜卑 归纳 契丹
+md_back_to_grassland = {
+
+	land_forcelimit_modifier = 0.1
+	land_attrition = -0.1
+	land_morale = 0.1
+}
+
+#成立视察队的期限，这段期限不再询问
+inspection_troop = {
+
+}
+
+#HAN殖民TW
+md_han_colony_tw = {
+	
+}
+#已经朝贡过了-5 years
+tribute_request_sent = {
+
+}
+#补给站
+army_supported_province = {
+	supply_limit_modifier = 0.25
+	local_manpower_modifier = 0.15
+	picture = "pov_supported_province"
+}
+md_process_meiji_reform = {
+	global_unrest = 2
+}	
+
+#明治维新(JAP)
+md_meiji_reform = {
+	artillery_cost = -0.2
+	cavalry_cost = -0.1
+	infantry_cost = -0.1
+	infantry_power = 0.1
+	cavalry_power = 0.1
+	discipline = 0.05
+	land_forcelimit_modifier = 0.1
+	global_manpower_modifier = 0.1
+	production_efficiency = 0.1
+	war_exhaustion_cost = -0.1
+	global_unrest = -2
+}
+
+#三月亡华(JAP)
+md_three_months = {
+	army_tradition = 0.1
+	artillery_cost = -0.2
+	cavalry_cost = -0.3
+	infantry_cost = -0.5
+	land_morale = 0.3
+	infantry_power = 0.35
+	discipline = 0.35
+	land_forcelimit_modifier = 1.0
+	global_manpower_modifier = 2.0
+	prestige_from_land = 0.1
+	production_efficiency = 0.33
+	war_exhaustion_cost = -0.1
+	global_unrest = -100
+}
+
+
+#狂热的战争念(JAP)
+md_fanaticism_war = {
+	global_sailors_modifier = 0.25
+	army_tradition = 0.2
+	artillery_cost = -0.5
+	cavalry_cost = -0.5
+	infantry_cost = -0.5
+	infantry_power = 0.2
+	discipline = 0.1
+	land_morale = 0.25
+	land_forcelimit_modifier = 0.8
+	global_manpower_modifier = 0.8
+	prestige_from_land = 0.5
+	production_efficiency = 1.3
+	war_exhaustion_cost = -1.95
+	global_unrest = -90
+	administrative_efficiency = 1.0
+
+}
+#狂热的战争念( nazi GER)
+md_fanaticism_war_GER = {
+	army_tradition = 0.2
+	artillery_cost = -0.2
+	cavalry_cost = -0.2
+	infantry_cost = -0.2
+	land_morale = 0.2
+	infantry_power = 0.2
+	discipline = 0.10
+	land_forcelimit_modifier = 0.25
+	global_manpower_modifier = 0.5
+	defensiveness = 0.15
+	prestige_from_land = 0.1
+	production_efficiency = 0.1
+	core_creation = -0.1
+	war_exhaustion_cost = -0.95
+	naval_morale = 0.25
+	global_unrest = -100
+	administrative_efficiency = 1.0
+}
+md_fanaticism_war_NZ1 = {
+	global_sailors_modifier = 0.25
+	naval_morale = 0.33
+	army_tradition = 0.2
+	artillery_cost = -0.5
+	cavalry_cost = -0.5
+	infantry_cost = -0.5
+	land_morale = 0.55
+	infantry_power = 0.25
+	discipline = 0.25
+	land_forcelimit_modifier = 1.0
+	global_manpower_modifier = 2.0
+	defensiveness = 0.55
+	prestige_from_land = 0.5
+	production_efficiency = 1.5
+	core_creation = -0.5
+	war_exhaustion_cost = -0.95
+	global_unrest = -100
+	administrative_efficiency = 1.0
+}
+
+
+#对日抗战演讲
+md_against_JAP = {
+	land_morale = 0.1
+	global_manpower_modifier = 0.1
+	war_exhaustion_cost = -1.0
+	global_unrest = -100
+}
+#与西方合作
+md_against_JAP_with_western = {
+	land_morale = 0.1
+	land_forcelimit_modifier = 0.15
+	global_manpower_modifier = 0.2
+	war_exhaustion_cost = -0.5
+}
+#原子弹受伤省份
+mp_bomb_province = {
+	local_production_efficiency = -0.5
+	local_tax_modifier = -0.5
+	local_manpower_modifier = -0.5
+}
+#狂热的战争念-GJ1-北伐
+md_three_principles_of_the_people_war = {
+	army_tradition = 0.1
+	artillery_cost = -0.2
+	cavalry_cost = -0.2
+	infantry_cost = -0.2
+	land_morale = 0.2
+	infantry_power = 0.1
+	discipline = 0.2
+	land_forcelimit_modifier = 0.1
+	global_manpower_modifier = 0.25
+	defensiveness = 0.1
+	prestige_from_land = 0.5
+	production_efficiency = 0.2
+	war_exhaustion_cost = -0.25
+	global_tax_modifier = 0.33
+	core_creation = -0.25
+}
+
+####军阀出来的两年buff###########
+md_warlord_fanaticism_war = {
+	cavalry_cost = -0.1
+	infantry_cost = -0.1
+	land_morale = 0.05
+	land_forcelimit_modifier = 0.1
+	global_manpower_modifier = 0.1
+}
+####狂热的战争念-CW1-无产阶级专政
+md_dictatorship_of_proletariat_war = {
+	army_tradition = 0.1
+	artillery_cost = -0.2
+	cavalry_cost = -0.2
+	infantry_cost = -0.5
+	land_morale = 0.25
+	infantry_power = 0.2
+	discipline = 0.2
+	land_forcelimit_modifier = 0.1
+	global_manpower_modifier = 0.25
+	defensiveness = 0.33
+	prestige_from_land = 0.5
+	production_efficiency = 0.45
+	war_exhaustion_cost = -0.85
+	global_tax_modifier = 0.25
+	core_creation = -0.5
+}
+
+
+########特殊占领机制说明########
+#天朝对于太平天国占有制度#
+md_TP1_warlord_specified_a = {
+
+}
+#军阀(包含太平天国)- 天朝之间
+md_warlord_specified_a = {
+
+}
+
+#蒙古部落之间#
+md_mongol_steppe_horde_a = {
+
+}
+#军阀之间#
+md_modern_chinese_warlord_a = {
+
+}
+#天朝-军阀之间#
+md_ancient_chinese_warlord_a = {
+
+}
+
+#天朝说明#不用消失
+md_celestial_empire_warlord_a = {
+
+}
+#########特殊占领机制END########
+
+#反清复明之号召
+fan_qing_fuming = {
+
+	army_tradition = 0.1
+	artillery_cost = -0.25
+	cavalry_cost = -0.25
+	infantry_cost = -0.25
+	land_forcelimit_modifier = 0.1
+	global_tax_modifier = 0.20
+	discipline = 0.05
+	land_morale = 0.1
+}
+#########忽里勒台大会机制########
+khuruldai_system_done = {
+
+}
+#########东方游牧变成早期中华科技组########
+md_EarlyNomad_EarlyChinese = {
+	global_tax_modifier = -0.05
+}
+##########派系影响的#############
+concessions_chinese_general_party = {
+	global_tax_modifier = -0.15
+	global_autonomy = 0.05
+	production_efficiency = -0.1
+}
+fire_chinese_general_party = {
+	land_morale = -0.1
+	discipline = -0.05
+	infantry_power = -0.1
+}
+
+concessions_relationship_party = {
+	legitimacy = -1
+	heir_chance = -0.5
+}
+fire_relationship_party = {
+	core_creation = 0.15
+	diplomats = -1
+}	
+##########plague modifier-province#############
+rab_plague_2 = {
+	local_development_cost = 0.5
+	local_manpower_modifier = -0.5
+	garrison_growth = -0.5
+}
+
+rab_plague_1 = {
+	local_development_cost = 0.2
+	local_manpower_modifier = -0.2
+	garrison_growth = -0.2
+}
+
+rab_plague_0 = {
+
+}
+##########influenza_already###############
+
+influenza_controlled = {
+	picture = "pov_influenza_controlled"
+}
+
+influenza_already = {
+	picture = "pov_influenza_already"
+}
+
+#influenza is setting on original eu4 files
+
+pov_flood = {
+
+	local_friendly_movement_speed  = -0.15
+	local_hostile_movement_speed = -0.98
+	local_manpower_modifier = -0.5
+	local_tax_modifier = -0.5
+	attrition = 150
+	max_attrition = 200
+	picture = "pov_flood_icon"
+	
+}
+
+md_discipline_change_soldier = {
+	discipline = -0.01
+	#army_tradition_decay = 0.01
+	global_manpower_modifier = 0.25
+	global_regiment_recruit_speed = -0.40
+	artillery_cost = -0.25
+	cavalry_cost = -0.25
+	infantry_cost = -0.5
+}
+
+md_fan_qing_fuming = {
+
+	artillery_cost = -0.2
+	cavalry_cost = -0.2
+	infantry_cost = -0.2
+	land_morale = 0.1
+	land_forcelimit_modifier = 0.2
+}
+
+md_fan_qing_fuming_succeed = {
+
+	artillery_cost = -0.2
+	cavalry_cost = -0.2
+	infantry_cost = -0.2
+	land_morale = 0.15
+	land_forcelimit_modifier = 0.1
+}
+
+
+
+occupy_with_CHN = {
+
+}
+occupy_with_ROC = {
+
+}
+occupy_with_m_warlord = {
+
+}
+occupy_with_rc_warlord = {
+
+}
+
+yearly_qiang_festival = {
+	land_morale = 0.1
+	global_tax_modifier = 0.1
+}
+
+#1  LL1: "绿林军"
+#2  CH1: "赤眉军"
+#3  CH2: "公孙述"
+#4  DO1: "窦融军"
+#5  DX4: "董宪军"
+#6  DZ1: "刁子都"
+#7  KU2: "隗嚣军"
+#8  LU2: "卢家军"
+#9  LX1: "李宪军"
+#10 LX2: "刘秀军"
+#11 LY1: "刘永军"
+#12 PO1: "彭宠军"
+#13 QI3: "秦丰军"
+#14 WA1: "王郎军"
+#15 WD1: "王调军"
+#16 WQ1: "文齐军"
+#17 TI1: "田戎军"
+#18 TM3: "铜马军"
+#19 ZB1: "张步军"
+
+LL1_extend = {
+
+}
+
+wang_mang_golden_age = {
+
+	army_tradition = 1
+	artillery_cost = -0.1
+	cavalry_cost = -0.15
+	infantry_cost = -0.15
+	land_forcelimit_modifier = 0.15
+	global_tax_modifier = 0.20
+	discipline = 0.05
+	land_morale = 0.1
+}
+#都護府
+md_building_xi1duhufu = {
+	global_unrest = -2
+	prestige = 1
+	cavalry_cost = -0.1
+}
+#都護府
+md_building_anduhufu = {
+	global_unrest = -2
+	prestige = 1
+	cavalry_cost = -0.1
+}
+#都護府
+md_building_duhufu = {
+	global_unrest = -2
+	prestige = 1
+	cavalry_cost = -0.1
+}
+#都護府
+md_building_annanduhufu = {
+	land_forcelimit_modifier = 0.1
+	trade_efficiency = 0.05
+	infantry_cost = -0.1
+}
+#都護府
+md_building_andonduhufu = {
+	prestige = 1
+	mercenary_cost = -0.1
+}	
+
+#北庭都護府
+md_building_BT1duhufu = {
+	artillery_fire = 1
+	war_exhaustion = -0.1
+}	
+
+
+#安西都護府
+md_building_AN4duhufu = {
+	trade_efficiency = 0.05
+	shock_damage = 0.1
+}	
+
+
+#冉魏的杀胡令
+md_RN1_kill_hu = {
+	
+	artillery_cost = -0.2
+	cavalry_cost = -0.2
+	infantry_cost = -0.25
+	land_morale = 0.25
+	land_forcelimit_modifier = 0.25	
+	global_manpower_modifier = 0.2
+	global_unrest = 2
+}
+#劉氏派系
+liu_faction_maxpower = {
+	prestige = 1
+	land_forcelimit_modifier = 0.1
+	global_unrest = -2
+}	
+#正統混亂爭奪
+legitimacy_wars = {
+	prestige = -10
+	global_unrest = 10
+}	
+

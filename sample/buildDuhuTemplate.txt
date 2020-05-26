@@ -1,0 +1,6 @@
+#都護府
+md_building_duhufu = {
+	global_unrest = -2
+	prestige = 1
+	cavalry_cost = -0.1
+}

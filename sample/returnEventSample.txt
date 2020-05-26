@@ -1,0 +1,17 @@
+country_event = {
+	id = :rabEventsId                #rab_events.100
+	title = :rabEventsName           #"rab_events.NAME100"
+	desc = :rabEventsDesc            #"rab_events.DESC100"
+	picture = receives_commands_adm_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = :rabEventsOption      #"rab_events.OPTA100"
+		inherit = :tag               #AN2
+		add_country_modifier = {
+			name = :modifierName     #"md_return_duhufu_AN2"
+			duration = 36500
+		}		
+	}
+}

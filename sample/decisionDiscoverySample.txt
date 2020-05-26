@@ -1,0 +1,3 @@
+			:discovery = {
+				discover_country = :tag
+			}

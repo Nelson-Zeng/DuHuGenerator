@@ -1,0 +1,1933 @@
+#2019-03-03 from email / add my fixed.
+#2019-04-27 add new areas to advance 7.6
+#2019-09-02 fixed bug for #苏禄苏丹国请奉纳版图表文 colonize_sulu
+#2019-09-18 fixed bugs for 西域問題
+chinese_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = {
+			OR = {
+				tag = LX2
+				tag = HND
+			}
+		}
+		OR = {
+			has_reform = ancient_chinese_warlord_reform
+			has_reform = celestial_empire
+		}
+
+	}
+	has_country_shield = yes
+
+	ruzhu_zhongyuan = {					#入主中原 
+		icon = mission_a_million_rice_fields		#图标
+		required_missions = {  }			#前置任务 也就是前一个任务
+		#position = 6						#从上到下数本任务的位置，最顶端对应的数值为1
+		provinces_to_highlight = {			#要突出显示的省或地区
+			OR = {
+				area = henan_area			#地区 河南
+				area = henan_west_area
+				area = central_henan_area #NEW 7.6 2019-04-27
+				area = north_henan_area
+				area = henan_east_area  #NEW 7.6 2019-04-27
+				
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT		#本家或属国(非朝贡国)持有
+			}
+		}
+		trigger = {
+			henan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			central_henan_area = { #NEW 7.6 2019-04-27
+				type = all
+				owned_by = ROOT
+			}			
+			henan_west_area = {
+				type = all
+				owned_by = ROOT
+			}
+			henan_east_area = { #NEW 7.6 2019-04-27
+				type = all
+				owned_by = ROOT
+			}
+			north_henan_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 20
+			add_adm_power = 100
+			hebei_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			hebei_mid_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			hebei_west_area = {  #NEW 7.6
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			} 	
+		}
+	}
+	
+	yanyun_16zhou = {						#夺回燕云十六洲
+		icon = mission_assert_control_over_delhi		#图标
+		required_missions = { ruzhu_zhongyuan }			#前置任务 也就是前一个任务
+		#position = 6						#从上到下数本任务的位置，最顶端对应的数值为1
+		provinces_to_highlight = {			#要突出显示的省或地区
+			OR = {
+				area = hebei_area			#地区 河北北部
+				area = hebei_mid_area
+				area = hebei_west_area  #NEW 7.6
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT		#本家或属国(非朝贡国)持有
+			}
+		}
+		trigger = {
+			hebei_area = {
+				type = all
+				owned_by = ROOT
+			}
+			hebei_mid_area = {
+				type = all
+				owned_by = ROOT
+			}
+			hebei_west_area = { #NEW 7.6
+				type = all
+				owned_by = ROOT
+			}			
+		}
+		effect = {
+			add_prestige = 20
+			add_adm_power = 100
+			#蒙古 河套地区
+			ordos_east_area= { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			#满洲
+			liaoning_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			liaoning_east_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			#华北
+			hebei_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			hebei_mid_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			hebei_west_area = {  #NEW 7.6
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			south_hebei_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			shandong_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			
+			shandong_mid_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			west_shandong_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			shandong_south_area = {  #NEW 7.6 NEW
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			henan_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			central_henan_area = {   #NEW 7.6 2019-04-27
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			henan_west_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			henan_east_area = { #NEW 7.6 2019-04-27
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			north_henan_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			shanxi_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			shanxi_north_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			shanxi_east_area = { #NEW 7.6
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			shanxi_west_area = { #NEW 7.6
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}			
+			gansu_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			central_gansu_area = { #NEW  7.6
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			gansu_eastnorth_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			shaanxi_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			central_shaanxi_area = { #NEW 7.6 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			shaanxi_north_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			#华南
+			guangdong_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			west_guangdong_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			hainan_area = {  #NEW 7.6
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			
+			guangzhou_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			huguang_west_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			fujian_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			fujian_north_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			jiangxi_area = { #NEW 7.6
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			
+			jiangxi_south_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			
+			huguang_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			huguang_mid_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			hunan_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			hunan_south_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			hunan_west_area = { #NEW 7.6
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			zhejiang_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			zhejiang_north_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			anhui_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			central_anhui_area = { #NEW 7.6
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			south_anhui_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			jiangsu_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			jiangsu_mid_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			south_jiangsu_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			#西南
+			guangxi_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			guangxi_center_area = { #NEW 7.6
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			yun_gui_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			sichuan_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			chuanbei_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			chuannan_area= { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+			chuanbei_east_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT		#添加永久宣称
+			}
+		}
+	}
+
+	qin_48jun = {
+		icon = mission_conquer_kathiawar
+		required_missions = { yanyun_16zhou }
+		#position = 5
+		provinces_to_highlight = {
+			OR = {
+			#蒙古 河套
+			area = ordos_east_area
+			#满洲
+			area = liaoning_area
+			area = liaoning_east_area
+			#华北
+			area = hebei_area
+			area = hebei_mid_area
+			area = south_hebei_area
+			area = hebei_west_area #NEW 7.6 
+			area = shandong_area
+			area = shandong_mid_area
+			area = west_shandong_area
+			area = shandong_south_area #NEW 7.6
+			area = henan_area
+			area = central_henan_area #NEW 7.6 2019-04-27
+			area = henan_west_area
+			area = henan_east_area #NEW 7.6 2019-04-27
+			area = north_henan_area
+			area = shanxi_area
+			area = shanxi_north_area
+			area = shanxi_east_area	#NEW 7.6 2019-04-27
+			area = shanxi_west_area	#NEW 7.6 2019-04-27			
+			area = gansu_area
+			area = central_gansu_area #NEW 7.6 2019-04-27
+			area = gansu_eastnorth_area
+			area = shaanxi_area
+			area = central_shaanxi_area #NEW 7.6 2019-04-27
+			area = shaanxi_north_area
+			#华南
+			area = guangdong_area
+			area = west_guangdong_area
+			area = hainan_area #NEW 7.6 2019-04-27
+			area = guangzhou_area
+			area = huguang_west_area
+			area = fujian_area
+			area = fujian_north_area
+			area = jiangxi_area
+			area = jiangxi_south_area #NEW 7.6 2019-04-27
+			area = huguang_area
+			area = huguang_mid_area
+			area = hunan_area
+			area = hunan_south_area
+			area = hunan_west_area #NEW 7.6 2019-04-27
+			area = zhejiang_area
+			area = zhejiang_north_area
+			area = anhui_area
+			area = central_anhui_area #NEW 7.6 2019-04-27
+			area = south_anhui_area
+			area = jiangsu_area
+			area = jiangsu_mid_area
+			area = south_jiangsu_area
+			#西南
+			area = guangxi_area
+			area = guangxi_center_area	#NEW 7.6 2019-04-27
+			area = yun_gui_area
+			area = sichuan_area
+			area = chuanbei_area
+			area = chuannan_area
+			area = chuanbei_east_area
+			
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT		#本家或属国(非朝贡国)持有
+			}
+		}
+		trigger = {
+			NOT = {
+				current_age = age_of_discovery
+				current_age = age_of_reformation
+			}
+			#蒙古 河套
+			ordos_east_area= { 
+					type = all
+					owned_by = ROOT
+			}
+			
+			#满洲
+			liaoning_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			liaoning_east_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			#华北
+			hebei_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			hebei_mid_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			hebei_west_area = { #NEW 7.6
+
+					type = all
+					owned_by = ROOT
+
+
+			}			
+			south_hebei_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			shandong_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			shandong_mid_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			west_shandong_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			shandong_south_area = {  #NEW 7.6
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			henan_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			central_henan_area = {  #NEW 7.6 2019-04-27
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			henan_west_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			henan_east_area = {  #NEW 7.6 2019-04-27
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			north_henan_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			shanxi_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			shanxi_east_area = {  #NEW 7.6
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			shanxi_west_area = { #NEW 7.6
+
+					type = all
+					owned_by = ROOT
+
+
+			}	
+			shanxi_north_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			gansu_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			central_gansu_area = {  #NEW 7.6 2019-04-27
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			gansu_eastnorth_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			shaanxi_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			central_shaanxi_area = {  #NEW 7.6 2019-04-27
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			shaanxi_north_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			#华南
+			guangdong_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			west_guangdong_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			hainan_area = { #NEW 7.6 2019-04-27
+
+					type = all
+					owned_by = ROOT
+
+
+			} 
+			guangzhou_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			huguang_west_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			fujian_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			fujian_north_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			jiangxi_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			huguang_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			huguang_mid_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			hunan_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			hunan_south_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			hunan_west_area = {  #NEW 7.6
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			zhejiang_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			zhejiang_north_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			anhui_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			central_anhui_area = {   #NEW 7.6 2019-04-27
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			south_anhui_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			jiangsu_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			jiangsu_mid_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			south_jiangsu_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			#西南
+			guangxi_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			guangxi_center_area = {  #NEW 7.6
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			yun_gui_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			sichuan_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			chuanbei_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			chuannan_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			chuanbei_east_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+		}
+		effect = {
+			xinan_region = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_china_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	mandate_of_heaven_mission = {
+		icon = mission_japanese_fort
+		required_missions = { qin_48jun }
+		#position = 5
+		provinces_to_highlight = {
+			OR = {
+			#区域
+				region = xinan_region
+				region = north_china_region
+			#蒙古 河套
+			area = ordos_east_area
+			#满洲
+			area = liaoning_area
+			area = liaoning_east_area
+			#华南
+			area = guangdong_area
+			area = west_guangdong_area
+			area = hainan_area #NEW 7.6
+			area = guangzhou_area
+			area = huguang_west_area
+			area = fujian_area
+			area = fujian_north_area
+			area = jiangxi_area
+			area = huguang_area
+			area = huguang_mid_area
+			area = hunan_area
+			area = hunan_south_area
+			area = hunan_west_area #NEW 7.6
+			area = zhejiang_area
+			area = zhejiang_north_area
+			area = anhui_area
+			area = central_anhui_area #NEW 7.6 2019-04-27
+			area = south_anhui_area
+			area = jiangsu_area
+			area = jiangsu_mid_area
+			area = south_jiangsu_area
+	
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT		#本家或属国(非朝贡国)持有
+			}
+		}
+		trigger = {
+			NOT = {
+				current_age = age_of_discovery
+				current_age = age_of_reformation
+			}
+			#区域
+			xinan_region = {
+				type = all
+				owned_by = ROOT
+			}
+			north_china_region = {
+				type = all
+				owned_by = ROOT
+			}
+			#蒙古 河套
+			ordos_east_area= { 
+					type = all
+					owned_by = ROOT
+			}
+			
+			#满洲
+			liaoning_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			liaoning_east_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+
+			#华南
+			guangdong_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			west_guangdong_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			hainan_area = { #NEW 7.6 2019-04-27
+
+					type = all
+					owned_by = ROOT
+
+
+			} 			
+			guangzhou_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			huguang_west_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			fujian_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			fujian_north_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			jiangxi_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			jiangxi_south_area = { #NEW 7.6
+
+					type = all
+					owned_by = ROOT
+
+
+			}			
+			huguang_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			huguang_mid_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			hunan_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			hunan_area = { #NEW 7.6
+
+					type = all
+					owned_by = ROOT
+
+
+			}			
+			hunan_south_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			hunan_west_area = { #NEW 7.6
+
+					type = all
+					owned_by = ROOT
+
+
+			} 
+			zhejiang_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			zhejiang_north_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			anhui_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			central_anhui_area = { #NEW 7.6
+
+					type = all
+					owned_by = ROOT
+
+
+			}			
+			south_anhui_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			jiangsu_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			jiangsu_mid_area = { 
+
+					type = all
+					owned_by = ROOT
+
+
+			}
+			south_jiangsu_area = { 
+					type = all
+					owned_by = ROOT
+			}
+
+			
+		}
+		
+		effect = {
+			red_river_delta_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vietnam_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			korea_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			#蒙古 吐鲁番
+			turpan_kumul_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			#中亚
+			tarim_basin_area = { 		#塔里木
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+			tarim_basin_east_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}		#塔里木
+			jetysuu_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			#南准噶尔
+			zungaria_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+			#北准噶尔
+			north_zungaria = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+
+			kashgaria_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_altishahr_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			} 	
+			east_south_altishahr_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			shanshan_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hetian_area = {  #2019-09-17
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			} 
+		}
+	}
+	#征服大越
+	annex_dai_viet = {
+		icon = mission_chinese_general_riding
+		required_missions = { mandate_of_heaven_mission }
+
+		provinces_to_highlight = {
+			OR = {
+				area = red_river_delta_area
+				area = vietnam_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			red_river_delta_area_sub_holds = yes
+			vietnam_area_sub_holds = yes
+		}
+		effect = {
+			add_prestige = 20
+			add_adm_power = 100
+		}
+	}
+	#驱逐北方游牧 占领蒙古地区
+	defend_menggu = {
+		icon = mission_great_wall
+		required_missions = { kaituo_xiyu }
+		position = 7
+		provinces_to_highlight = {
+			region = mongolia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			#外蒙古南部
+			outer_mongolia_area_sub_holds = yes
+			#内蒙古西部
+			inner_mongolia_area_sub_holds = yes
+			#外蒙古东部
+			outer_east_mongolia_area_sub_holds = yes
+			#鄂尔多斯
+			ordos_area_sub_holds = yes
+			#河套地区
+			ordos_east_area_sub_holds = yes 
+			#内蒙古东部
+			eastern_mongolia_sub_holds = yes
+			#蒙古中部
+			central_mongolia_area_sub_holds = yes 
+			#内蒙古中部
+			eastern_mid_mongolia_sub_holds = yes
+			#科布多
+			altai_sayan_area_sub_holds = yes
+			#唐努乌梁海
+			tannu_uriankhai_area_sub_holds = yes 
+			#乌里雅苏台
+			uliastai_area_sub_holds = yes
+			#南布里亚特
+			buryatia_south_area_sub_holds = yes
+			#贝加尔湖西岸
+			irkutsk_west_area_sub_holds = yes
+		}
+		effect = {
+			add_prestige = 20
+			add_adm_power = 100
+		}
+	}
+	#占领满洲地区 並成立都護府
+	defend_manchuria = {
+		icon = mission_great_wall
+		required_missions = { defend_menggu }
+		position = 8
+		provinces_to_highlight = {
+			
+			area = heilongjiang_area
+			#南吉林地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			area = jilin_area
+			#北吉林地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			area = north_jilin_area
+			#伊喇氏地区是[Root.GetName]或是[Root.GetName]的都护府持有#			
+			area = ilan_hala_area
+			#北库页岛地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			area = ilan_hala_north_area
+			#南库页岛地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			area = ilan_hala_south_area
+			#辽宁西部地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			area = liaoning_area
+			#辽宁东部地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			area = liaoning_east_area
+			#吉林中部地区是[Root.GetName]或是[Root.GetName]的都护府持有#			
+			area = central_jilin_area
+			#东黑龙江地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			area = east_heilongjiang_area
+			#中黑龙江地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			area = central_heilongjiang_area
+			#伊喇氏中部地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			area = central_ilin_hala_area
+			#宁古塔地区是[Root.GetName]或是[Root.GetName]的都护府持有
+			area = ningguta_area			
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			#东黑龙江地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			heilongjiang_area_sub_holds = yes 
+			#南吉林地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			jilin_area_sub_holds = yes 
+			#北吉林地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			north_jilin_area_sub_holds = yes
+			#伊喇氏地区是[Root.GetName]或是[Root.GetName]的都护府持有#			
+			ilan_hala_area_sub_holds = yes 
+			#北库页岛地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			ilan_hala_north_area_sub_holds = yes 
+			#南库页岛地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			ilan_hala_south_area_sub_holds = yes 
+			#辽宁西部地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			liaoning_area_sub_holds = yes 
+			#辽宁东部地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			liaoning_east_area_sub_holds = yes
+			#吉林中部地区是[Root.GetName]或是[Root.GetName]的都护府持有#			
+			central_jilin_area_sub_holds = yes 
+			#东黑龙江地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			east_heilongjiang_area_sub_holds = yes 
+			#中黑龙江地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			central_heilongjiang_area_sub_holds = yes 
+			#伊喇氏中部地区是[Root.GetName]或是[Root.GetName]的都护府持有#
+			central_ilin_hala_area_sub_holds = yes 
+			#宁古塔地区是[Root.GetName]或是[Root.GetName]的都护府持有
+			ningguta_area_sub_holds = yes 
+		}
+		effect = {
+			add_prestige = 20
+			add_adm_power = 100
+		}
+	}	
+	#挺进西藏
+#tibet_region = {
+#	areas = {
+#		utsang_area
+#		utsang_east_area
+#		utsang_mountain_area
+#		amdo_area
+#		amdo_south_area
+#		kham_area
+#		tsang_area
+#		bhutan_area
+#		ngari_area		
+#	}
+#}	
+	defend_xizhang = {
+		icon = mission_great_wall
+		required_missions = { defend_manchuria }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1788
+				region = tibet_region
+			} 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			1788 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					AND = { owned_by = XIY XIY = { is_subject_of = ROOT } }
+					AND = { owned_by = XI1 XI1 = { is_subject_of = ROOT } }
+					AND = { owned_by = AN3 AN3 = { is_subject_of = ROOT } }
+					AND = { owned_by = AN2 AN2 = { is_subject_of = ROOT } }
+					AND = { owned_by = ND1 ND1 = { is_subject_of = ROOT } }
+					AND = { owned_by = BT1 BT1 = { is_subject_of = ROOT } }
+					AND = { owned_by = AN4 AN4 = { is_subject_of = ROOT } }					
+				}
+			}	
+			utsang_area_sub_holds = yes
+			utsang_east_area_sub_holds = yes
+			utsang_mountain_area_sub_holds = yes
+			amdo_area_sub_holds = yes
+			amdo_south_area_sub_holds = yes
+			kham_area_sub_holds = yes
+			tsang_area_sub_holds = yes
+			bhutan_area_sub_holds = yes
+			ngari_area_sub_holds = yes
+		}
+		effect = {
+			add_prestige = 20
+			add_adm_power = 100
+		}
+	}	
+}	
+
+
+
+chinese_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		AND = {
+			NOT = {
+				tag = LX2
+                tag = HND
+			}
+			OR = {
+				has_reform = ancient_chinese_warlord_reform
+				has_reform = celestial_empire
+			}
+		}
+	}
+    
+	has_country_shield = yes
+	
+		#开拓西域
+	kaituo_xiyu = {
+		icon = mission_into_africa
+		required_missions = { annex_dai_viet }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+
+			#蒙古 吐鲁番
+			area = turpan_kumul_area
+			#中亚
+			area = tarim_basin_area				#塔里木
+			area = tarim_basin_east_area		#塔里木
+			area = jetysuu_area					#七河
+			area = zungaria_area					#南准噶尔
+			area = north_zungaria				#北准噶尔#2019-09-17
+			area = kashgaria_area
+			area = east_altishahr_area 			
+			area = east_south_altishahr_area
+			area = shanshan_area				#2019-09-17
+			area = hetian_area					#2019-09-17
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT		#本家或属国(非朝贡国)持有
+			}
+		}
+		trigger = {
+			#蒙古 吐鲁番
+			turpan_kumul_area_sub_holds = yes
+			#北六城
+			tarim_basin_area_sub_holds = yes
+			#东塔里木盆地"
+			tarim_basin_east_area_sub_holds = yes
+			##七河
+			jetysuu_area_sub_holds = yes
+			#南准噶尔地区
+			zungaria_area_sub_holds = yes
+			#北准噶尔
+			north_zungaria_sub_holds = yes 
+			#喀什噶尔地区
+			kashgaria_area_sub_holds = yes
+			#南六城地区
+			east_altishahr_area_sub_holds = yes
+			#疆南绿洲地区
+			east_south_altishahr_area_sub_holds = yes
+			#鄯善地区
+			shanshan_area_sub_holds = yes
+			#和阗地区
+			hetian_area_sub_holds = yes
+		}
+		effect = {
+			add_prestige = 20
+			add_adm_power = 100
+			
+			mongolia_region = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			manchuria_region = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	defend_korea = {
+		icon = mission_great_wall
+		required_missions = { kaituo_xiyu }
+		position = 7
+		provinces_to_highlight = {
+			region = korea_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			korea_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 20
+			add_adm_power = 100
+		}
+	}	
+	
+	defend_japan = {
+		icon = mission_great_wall
+		required_missions = { defend_korea }
+		#position = 8
+		provinces_to_highlight = {
+			region = japan_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			hokkaido_area_sub_holds = yes
+			hokuriku_area_sub_holds = yes
+			kanto_area_sub_holds = yes
+			eastern_kanto_area_sub_holds = yes
+			kyushu_area_sub_holds = yes
+			northern_kyushu_sub_holds = yes
+			shikoku_area_sub_holds = yes
+			eastern_chubu_area_sub_holds = yes
+			chubu_area_sub_holds = yes
+			kinai_area_sub_holds = yes
+			thohoku_area_sub_holds = yes
+			saigoku_area_sub_holds = yes
+			sanindo_area_sub_holds = yes
+		}
+		effect = {
+			add_prestige = 20
+			add_adm_power = 100
+		}
+	}	
+
+
+	#吕宋难民
+	colonize_lvsong = {
+		icon = mission_invade_island
+		required_missions = { colonize_poluozhou }
+		position = 10		
+		provinces_to_highlight = {
+			OR = {
+				area = luzon_area
+				area  = southern_luzon_area
+			}	
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			#luzon_area = { luzon_area:0 "吕宋北部"
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			#southern_luzon_area = { southern_luzon_area:0 "吕宋南部"
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+				southern_luzon_area_sub_holds = yes
+				luzon_area_sub_holds = yes
+			
+		}
+		effect = {
+			add_country_modifier = {
+				name = "colonial_enthusiasm"
+				duration = 7300
+			}
+		}
+	}
+
+}
+
+chinese_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		AND = {
+			NOT = {
+				tag = LX2
+                tag = HND
+			}
+			OR = {
+				has_reform = ancient_chinese_warlord_reform
+				has_reform = celestial_empire
+			}
+		}
+	}
+    
+	has_country_shield = yes
+	#殖民台湾
+	colonize_taiwan = {
+		icon = mission_invade_island
+		required_missions = { kaituo_xiyu }
+		position = 7		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2857
+				province_id = 2858
+				province_id = 738
+				province_id = 3217
+				province_id = 4164
+				province_id = 4165
+			}	
+			NOT = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					AND = { owned_by = XIY XIY = { is_subject_of = ROOT } }
+					AND = { owned_by = XI1 XI1 = { is_subject_of = ROOT } }
+					AND = { owned_by = AN3 AN3 = { is_subject_of = ROOT } }
+					AND = { owned_by = AN2 AN2 = { is_subject_of = ROOT } }
+					AND = { owned_by = ND1 ND1 = { is_subject_of = ROOT } }
+					AND = { owned_by = BT1 BT1 = { is_subject_of = ROOT } }
+					AND = { owned_by = AN4 AN4 = { is_subject_of = ROOT } }					
+				}
+			}
+		}
+		trigger = {
+			taiwan_area_sub_holds = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = "colonial_enthusiasm"
+				duration = 7300
+			}
+		}
+	}	
+	#南洋贸易之旧港
+	colonize_jiugang = {
+		icon = mission_invade_island
+		required_missions = { colonize_taiwan }
+		position = 7		
+		provinces_to_highlight = {
+			OR = {
+				area = south_sumatra_area
+				area  = central_sumatra_area
+			}	
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			owns = 622
+			#south_sumatra_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			#central_sumatra_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			south_sumatra_area_sub_holds = yes  #楠榜
+			central_sumatra_area_sub_holds = yes #廖内 
+		}
+		effect = {
+			add_country_modifier = {
+				name = "colonial_enthusiasm"
+				duration = 7300
+			}
+		}
+	}
+	#兰芳公司的面圣
+	colonize_poluozhou = {
+		icon = mission_invade_island
+		required_missions = { colonize_jiugang }
+		#position = 8		
+		provinces_to_highlight = {
+			OR = {
+				area = sarawak_area
+				area = kalimantan_area
+				area = kutai_area
+			}	
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			
+			2418 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					AND = { owned_by = XIY XIY = { is_subject_of = ROOT } }
+					AND = { owned_by = XI1 XI1 = { is_subject_of = ROOT } }
+					AND = { owned_by = AN3 AN3 = { is_subject_of = ROOT } }
+					AND = { owned_by = AN2 AN2 = { is_subject_of = ROOT } }
+					AND = { owned_by = ND1 ND1 = { is_subject_of = ROOT } }
+					AND = { owned_by = BT1 BT1 = { is_subject_of = ROOT } }
+					AND = { owned_by = AN4 AN4 = { is_subject_of = ROOT } }					
+				}
+			}				
+			#sarawak_area = {sarawak_area:0 "砂拉越"
+			#kalimantan_area = { kalimantan_area:0 "加里曼丹"
+			#kutai_area = { kutai_area_name:0 "库泰"
+    
+			sarawak_area_sub_holds = yes #砂拉越
+			kalimantan_area_sub_holds = yes #加里曼丹
+			kutai_area_sub_holds = yes #库泰
+		}
+		effect = {
+			add_country_modifier = {
+				name = "colonial_enthusiasm"
+				duration = 7300
+			}
+		}
+	}
+	
+
+	#岛夷志略之麻那里和罗婆斯
+
+	colonize_australia = {
+		icon = mission_invade_island
+		required_missions = { colonize_poluozhou }
+		position = 11		
+		provinces_to_highlight = {
+			region = australia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			australia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "colonial_enthusiasm"
+				duration = 7300
+			}
+		}
+	}	
+}
+
+chinese_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		AND = {
+			NOT = {
+				tag = LX2
+                tag = HND
+			}
+			OR = {
+				has_reform = ancient_chinese_warlord_reform
+				has_reform = celestial_empire
+			}
+		}
+	}
+    
+	has_country_shield = yes
+	#苏禄苏丹国请奉纳版图表文
+	colonize_sulu = {
+		icon = mission_invade_island
+		required_missions = { colonize_poluozhou }
+		position = 10		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 636
+				province_id = 637
+				province_id = 2425
+				province_id = 651
+				province_id = 655
+				province_id = 4482
+			}
+			NOT = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					AND = { owned_by = XIY XIY = { is_subject_of = ROOT } }
+					AND = { owned_by = XI1 XI1 = { is_subject_of = ROOT } }
+					AND = { owned_by = AN3 AN3 = { is_subject_of = ROOT } }
+					AND = { owned_by = AN2 AN2 = { is_subject_of = ROOT } }
+					AND = { owned_by = ND1 ND1 = { is_subject_of = ROOT } }
+					AND = { owned_by = BT1 BT1 = { is_subject_of = ROOT } }
+					AND = { owned_by = AN4 AN4 = { is_subject_of = ROOT } }					
+				}
+			}	
+		}
+		trigger = {
+			colonize_sulu_sub_holds = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = "colonial_enthusiasm"
+				duration = 7300
+			}
+		}
+	}
+}

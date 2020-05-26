@@ -1,0 +1,48 @@
+	declare_war_to_duhufu_AN2 = {
+		category = duhufu_actions
+		require_acceptance = no
+		alert_tooltip = ICON_DUHUFU_WAR
+		is_visible = {
+			overlord_of = AN2			 
+			FROM = {
+				is_neighbor_of = AN2
+			}
+			NOT = { AN2 = { has_country_flag = tmp_rab_events_110 } }
+		}		
+		is_allowed = {
+			knows_country = FROM
+			FROM = {
+				NOT = { alliance_with = AN2 }
+				NOT = { truce_with = AN2 }
+				NOT = { is_subject_of = ROOT }
+			}
+			AN2 = {
+				is_at_war = no	
+			}	
+		}
+		on_accept = {
+			FROM = {
+				save_global_event_target_as = tg_declare_war_to_duhufu_AN2
+			}	
+			AN2 = {
+				country_event = {
+					id = rab_events.110
+				}	
+			}	
+		}
+		ai_will_do = {
+			NOT = {
+				has_opinion = {
+					who = FROM
+					value = -100
+				}
+			}
+			num_of_cities = 33
+			AN2 = {
+				army_size = FROM
+			}
+			NOT = {
+				has_country_modifier = ai_declare_war_to_duhufu
+			}	
+		}
+	}
